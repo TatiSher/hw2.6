@@ -29,7 +29,8 @@ public class Main {
     }
 
     private static void task2getEvenNumbers() {
-        Collections.sort(nums);
+       TreeSet<Integer> uniqueNumbers = new TreeSet<>(Comparator.reverseOrder());
+        uniqueNumbers.addAll(nums);
         for (int i : nums) {
             if (i % 2 == 0) {
                 System.out.print(i + " ");
@@ -38,7 +39,7 @@ public class Main {
     }
 
     private static void task3getUniqueWords() {
-        Set<String> uniqueWords = new LinkedHashSet<>(text);
+        Set<String> uniqueWords = new HashSet<>(text);
         System.out.println(uniqueWords);
 
     }
